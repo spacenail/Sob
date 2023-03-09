@@ -1,4 +1,4 @@
-package com.github.spacenail.Sob;
+package com.github.spacenail.sob;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
