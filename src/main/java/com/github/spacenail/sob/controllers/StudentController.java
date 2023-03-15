@@ -22,15 +22,16 @@ public class StudentController {
         return studentService.getStudents();
     }
     @PostMapping
-    public void addStudent(Student student){
+    public void addStudent(@RequestBody Student student){
         studentService.addStudent(student);
     }
     @DeleteMapping()
-    public void deleteStudent(Student student){
+    public void deleteStudent(@RequestBody Student student){
+        System.out.println(student);
         studentService.deleteStudent(student);
     }
     @PutMapping
-    public void putStudent(Student student){
+    public void putStudent(@RequestBody Student student){
         studentService.updateStudent(student);
     }
 

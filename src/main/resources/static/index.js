@@ -7,6 +7,30 @@ angular.module('app', []).controller('indexController', function ($scope, $http)
             });
     };
 
+    $scope.deleteStudent = function(student){
+    $http({
+        method: 'DELETE',
+        url: contextPath,
+        data: student,
+        headers: {
+            'Content-type': 'application/json'
+        }
+        });
+        $timeout(function() { $scope.loadStudents()}, 200);
+        };
+
+
+    $scope.addStudent = function(newStudent){
+        $http({
+            method: 'POST',
+            url: contextPath,
+            data: newStudent,
+            headers: {
+                'Content-type': 'application/json'
+            }
+        });
+        $timeout(function() { $scope.loadStudents()}, 200);
+        };
 
     $scope.loadStudents();
 });

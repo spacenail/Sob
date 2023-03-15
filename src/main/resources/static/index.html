@@ -25,6 +25,10 @@
             <td> {{student.age}} </td>
             <td> <button class="btn btn-primary" ng-click="deleteStudent(student)"> Удалить </button> </td>
         </tr>
+        <td> <input type="number" placeholder="1" ng-model="newStudent.id" required></td>
+        <td> <input type="text" placeholder="Ivan" ng-model="newStudent.name" required></td>
+        <td> <input type="number" placeholder="18" ng-model="newStudent.age" required></td>
+        <td> <button class="btn btn-primary" ng-click="addStudent(newStudent)"> Добавить </button> </td>
         </tbody>
     </table>
 </div>
